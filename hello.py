@@ -37,6 +37,20 @@ def internal_server_error(e):
     return render_template('500.html'), 500
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+
+    return render_template('login.html')
+
+
+@app.route('/loginResponse', methods=['GET', 'POST'])
+def login_response():
+
+    name = request.form.get('username')
+
+    return render_template('login_response.html', name=name)
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
 

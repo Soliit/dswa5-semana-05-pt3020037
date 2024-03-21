@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="container">
+    <form action="/loginResponse" method="post" class="form-signin">
+      <input id="csrf_token" name="csrf_token" type="hidden" value="IjI4YTZhMzI1NjI4ZDMyYWYwMmZhZTIzNDJkYTQwNzI3MzRmYzQ3NjQi.ZfjJcg.7llfc66VLfXLRl4Iyl-uAhqg2z4">
+      <h2 class="form-signin-heading">Login:</h2>
+      <input class="input-block-level" id="username" name="username" placeholder="Usuário ou e-mail" required="" type="text" value="">
+      <input class="input-block-level" id="password" name="password" placeholder="Informe a sua senha" required="" type="password" value="">
+      <input class="btn btn-large btn-primary" id="submit" name="submit" type="submit" value="Enviar">
+    </form>
+    <br>
+    <p>The local date and time is <span class="" data-timestamp="2024-03-18T23:08:34Z" data-function="format" data-format="LLL" data-refresh="0" style="">March 18, 2024 8:08 PM</span>.</p>
+    <p>That was <span class="" data-timestamp="2024-03-18T23:08:34Z" data-function="fromNow" data-refresh="60000" style="">2 minutes ago</span>.</p>
+</div>
+{% endblock %}
